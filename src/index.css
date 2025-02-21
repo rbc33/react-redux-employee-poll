@@ -1,0 +1,283 @@
+body {
+  margin: 0;
+  padding: 10px;
+  font-family: sans-serif;
+  color: #252525;
+}
+
+a {
+  text-decoration: none;
+  color: #252525;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.btn {
+  text-transform: uppercase;
+  margin: 35px auto;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.29);
+  cursor: pointer;
+  background: #fff;
+  font-size: 16px;
+  width: 250px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: 0;
+  font-weight: 700;
+  border-width: 2px;
+}
+.poll-btn {
+  text-transform: uppercase;
+  margin: 15px auto;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.29);
+  cursor: pointer;
+  background: #fff;
+  font-size: 16px;
+  width: 250px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.poll-btn:hover {
+  border-color: rgba(17, 88, 143, 0.5);
+  text-decoration: none;
+}
+
+.poll-btn:focus {
+  outline: 0;
+  font-weight: 700;
+  border-width: 2px;
+}
+.selector {
+  border: 1px solid #dad7d7;
+  padding: 10px;
+  font-size: 15px;
+  width: 250px;
+}
+
+
+.center {
+  text-align: center;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logout-btn {
+    border: none;
+    background: none;
+    color: #666;
+    cursor: pointer;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.nav li:first-child {
+  padding-left: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.avatar {
+  height: 50px;
+  border-radius: 25px;
+  margin: 10px;
+}
+.logIn-image {
+  height: 300px;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+.dashboard-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.polls-section {
+  margin-bottom: 40px;
+}
+
+.polls-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.poll-info {
+  border: 1px solid #dad7d7;
+  margin: 0;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.poll-info > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poll-info:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+.poll {
+  width: 100%;
+  max-width: 590px;
+  padding: 10px;
+  display: flex;
+  margin: 0 auto;
+  border: 1px solid #dad7d7;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+
+/* Hacky but less typing in the video */
+.poll-info > div > span:first-child {
+  font-weight: bold;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.poll-info > div > span:nth-child(2) {
+  color: #969696;
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-bottom: 5px;
+}
+.poll-info > div > div {
+  margin: 5px;
+  color: #969696;
+  font-size: 15px;
+}
+.poll-info > div > p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+
+
+
+.new-poll {
+  width: 100%;
+  max-width: 590px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea {
+  border-radius: 4px;
+  border: 1px solid #dad7d7;
+  padding: 10px;
+  font-size: 15px;
+  height: 100px;
+}
+/* Add this to your existing CSS */
+.poll-info:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+.poll-options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    
+}
+
+.poll-option {
+    border: 1px solid #dad7d7;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+.poll-option-ans {
+    border: 2px solid #0dad35;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.poll-option:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
