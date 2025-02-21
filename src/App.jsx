@@ -7,6 +7,8 @@ import { Routes, Route } from "react-router-dom";
 import LogIn from "./Components/LogIn";
 import Dashboard from "./Components/dashboard";
 import Poll from "./Components/Poll";
+import NewPoll from "./Components/NewPoll";
+import LeaderBoard from "./Components/LeaderBoard";
 
 const App = (props) => {
 	useEffect(() => {
@@ -30,6 +32,8 @@ const App = (props) => {
 				<Routes>
 					<Route path="/" element={<Dashboard />} />
 					<Route path="/polls/:id" element={<Poll />} />
+					<Route path="/new" element={<NewPoll />} />
+					<Route path="/leaderboard" element={<LeaderBoard />} />
 				</Routes>
 			</div>
 		</>

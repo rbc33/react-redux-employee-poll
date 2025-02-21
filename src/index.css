@@ -78,6 +78,7 @@ a {
   font-weight: bold;
 }
 
+/* Navegación */
 .nav ul {
     display: flex;
     flex-direction: row;
@@ -87,6 +88,12 @@ a {
     margin: 0;
 }
 
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Usuario en Nav */
 .user-info {
     display: flex;
     align-items: center;
@@ -99,6 +106,57 @@ a {
     align-items: flex-start;
 }
 
+/* LeaderBoard */
+.user-cell {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.leaderboard-user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.leaderboard-user-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+.leaderboard-user-id {
+    color: #969696;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.leaderboard-user-id {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Avatares */
+.avatar {
+    height: 50px;
+    border-radius: 25px;
+    margin: 0;
+}
+
+/* Botón logout */
 .logout-btn {
     border: none;
     background: none;
@@ -106,6 +164,7 @@ a {
     cursor: pointer;
     padding: 5px 0;
     font-size: 14px;
+    margin-top: 5px;
 }
 
 .logout-btn:hover {
@@ -116,8 +175,7 @@ a {
 .nav-links {
     display: flex;
     gap: 20px;
-}
-  display: flex;
+
   flex-direction: row;
   justify-content: flex-start;
   text-decoration: none;
@@ -241,7 +299,9 @@ li {
   border: 1px solid #dad7d7;
   padding: 10px;
   font-size: 15px;
-  height: 100px;
+  height: 40px;
+  width: 580px;
+  margin-top: 15px;
 }
 /* Add this to your existing CSS */
 .poll-info:hover {
