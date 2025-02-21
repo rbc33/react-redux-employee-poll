@@ -1,10 +1,13 @@
 import { handleAddQuestion } from "../actions/poll";
 import { useState } from "react";
 import { connect } from "react-redux";
+import { PropTypes } from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 const NewPoll = ({ dispatch }) => {
 	const [optionOne, setOptionOne] = useState("");
 	const [optionTwo, setOptionTwo] = useState("");
+	const navigate = useNavigate();
 
 	const handleChangeOne = (e) => {
 		e.preventDefault();
@@ -17,6 +20,7 @@ const NewPoll = ({ dispatch }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		dispatch(handleAddQuestion(optionOne, optionTwo));
+		navigate("/");
 	};
 	return (
 		<div className="poll-info">
@@ -46,6 +50,11 @@ const NewPoll = ({ dispatch }) => {
 		</div>
 	);
 };
+
+NewPoll.propTypes = {
+	dispatch: PropTypes.func.isRequired,
+};
+
 const mapStateToProps = ({ dispatch }) => {
 	return {
 		dispatch,

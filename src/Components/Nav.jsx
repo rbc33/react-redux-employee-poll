@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { setAuthedUser } from "../actions/authedUser";
 import { useNavigate } from "react-router-dom";
+import { PropTypes } from "prop-types";
 
 const Nav = ({ userName, avatar, authedUser, dispatch }) => {
 	const navigate = useNavigate();
@@ -36,6 +37,13 @@ const Nav = ({ userName, avatar, authedUser, dispatch }) => {
 			</ul>
 		</nav>
 	);
+};
+
+Nav.propTypes = {
+	userName: PropTypes.string.isRequired,
+	avatar: PropTypes.string.isRequired,
+	authedUser: PropTypes.string.isRequired,
+	dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = ({ authedUser, users, dispatch }) => {

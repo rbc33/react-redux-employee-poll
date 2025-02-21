@@ -2,6 +2,7 @@ import { useState } from "react";
 import { setAuthedUser } from "../actions/authedUser";
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { PropTypes } from "prop-types";
 
 const LogIn = ({ users, dispatch }) => {
 	const [selectedUser, setSelectedUser] = useState("");
@@ -44,6 +45,12 @@ const LogIn = ({ users, dispatch }) => {
 		</div>
 	);
 };
+
+LogIn.propTypes = {
+	users: PropTypes.object.isRequired,
+	dispatch: PropTypes.func.isRequired,
+};
+
 const mapStateToProps = (state) => ({
 	users: state.users,
 	dispatch: state.dispatch,

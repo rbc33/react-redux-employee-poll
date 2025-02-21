@@ -9,6 +9,8 @@ import Dashboard from "./Components/dashboard";
 import Poll from "./Components/Poll";
 import NewPoll from "./Components/NewPoll";
 import LeaderBoard from "./Components/LeaderBoard";
+import PrivateRoute from "./Components/PrivateRoute";
+import PropTypes from "prop-types";
 
 const App = (props) => {
 	useEffect(() => {
@@ -30,16 +32,48 @@ const App = (props) => {
 			<div className="container">
 				<Nav />
 				<Routes>
-					<Route path="/" element={<Dashboard />} />
-					<Route path="/polls/:id" element={<Poll />} />
-					<Route path="/new" element={<NewPoll />} />
-					<Route path="/leaderboard" element={<LeaderBoard />} />
+					<Route path="/login" element={<LogIn />} />
+					<Route
+						path="/"
+						element={
+							<PrivateRoute>
+								<Dashboard />
+							</PrivateRoute>
+						}
+					/>
+					<Route
+						path="/questions/:id"
+						element={
+							<PrivateRoute>
+								<Poll />
+							</PrivateRoute>
+						}
+					/>
+					<Route
+						path="/new"
+						element={
+							<PrivateRoute>
+								<NewPoll />
+							</PrivateRoute>
+						}
+					/>
+					<Route
+						path="/leaderboard"
+						element={
+							<PrivateRoute>
+								<LeaderBoard />
+							</PrivateRoute>
+						}
+					/>
 				</Routes>
 			</div>
 		</>
 	);
 };
-
+App.propTypes = {
+	loading: PropTypes.bool.isRequired,
+	dispatch: PropTypes.func.isRequired,
+};
 const mapStateToProps = ({ authedUser }) => ({
 	loading: authedUser === null,
 });

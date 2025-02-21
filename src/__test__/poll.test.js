@@ -1,10 +1,12 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+/* eslint-disable no-undef */
+import { describe, expect, it, jest } from "@jest/globals";
 import "@testing-library/jest-dom";
-import Poll from "../Components/poll";
+import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import configureStore from "redux-mock-store";
 import { thunk } from "redux-thunk";
+import Poll from "../Components/poll";
 
 // Mock the router hooks
 jest.mock("react-router-dom", () => ({
