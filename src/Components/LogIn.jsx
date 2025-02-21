@@ -16,7 +16,7 @@ const LogIn = ({ users, dispatch }) => {
 	};
 
 	return (
-		<div className="center">
+		<div className="center" data-testid="login-component">
 			<h1>Employee Polls</h1>
 			<img
 				className="logIn-image"
