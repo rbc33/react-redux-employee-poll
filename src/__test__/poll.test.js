@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import configureStore from "redux-mock-store";
 import { thunk } from "redux-thunk";
-import Poll from "../Components/poll";
+import Poll from "../Components/Poll";
 
 // Mock the router hooks
 jest.mock("react-router-dom", () => ({
