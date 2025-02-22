@@ -22,7 +22,6 @@ const Poll = (props) => {
 
 	const handleSubmit = (option) => {
 		dispatch(handleAnswerQuestion(question.id, option));
-		props.router.navigate("/"); // Navigate back to dashboard after voting
 	};
 
 	const answered = users[authedUser]?.answers[question.id];
