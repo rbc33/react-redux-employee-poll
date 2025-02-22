@@ -17,7 +17,7 @@ const Poll = (props) => {
 	const { question, author, avatar, dispatch, users, authedUser } = props;
 
 	if (!question) {
-		return <div>Question not found</div>;
+		return <div>Error 404 Poll not found</div>;
 	}
 
 	const handleSubmit = (option) => {

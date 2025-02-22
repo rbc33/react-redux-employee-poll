@@ -1,18 +1,21 @@
 import { useState } from "react";
 import { setAuthedUser } from "../actions/authedUser";
 import { connect } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { PropTypes } from "prop-types";
 
 const LogIn = ({ users, dispatch }) => {
 	const [selectedUser, setSelectedUser] = useState("");
 	const navigate = useNavigate();
+	const location = useLocation();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (selectedUser) {
 			dispatch(setAuthedUser(selectedUser));
-			navigate("/");
+			navigate(location.pathname ? location.pathname : "/", {
+				replace: true,
+			});
 		}
 	};
 
@@ -49,11 +52,12 @@ const LogIn = ({ users, dispatch }) => {
 LogIn.propTypes = {
 	users: PropTypes.object.isRequired,
 	dispatch: PropTypes.func.isRequired,
+	redirectPath: PropTypes.string,
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
 	users: state.users,
-	dispatch: state.dispatch,
+	redirectPath: ownProps.redirectPath,
 });
 
 export default connect(mapStateToProps)(LogIn);
